@@ -5,7 +5,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var Store = require('../src/Store');
 
-var testStore = 8386;
+var testStore = 10518;
 
 //TODO this test needs fleshing out
 describe('Menu', function() {
