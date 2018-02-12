@@ -6,8 +6,9 @@ var util = require('../src/Utilities');
 
 describe('Utilities', function() {
     describe('FindStores', function() {
+        const ADDRESS = '25 Union St, Kingston, ON, K7L2N8';
         it('should find nearby stores that deliver', function(done) {
-            util.findNearbyStores('900 Clark Ave, St. Louis, MO, 63102', 'Delivery', function(result) {
+            util.findNearbyStores(ADDRESS, 'Delivery', function(result) {
                 expect(result).to.exist;
                 expect(result.result.Stores).to.have.length.above(0);
 
@@ -16,7 +17,7 @@ describe('Utilities', function() {
         });
 
         it('should find nearby stores that carryout', function(done) {
-            util.findNearbyStores('900 Clark Ave, St. Louis, MO, 63102', 'Carryout', function(result) {
+            util.findNearbyStores(ADDRESS, 'Carryout', function(result) {
                 expect(result).to.exist;
                 expect(result.result.Stores).to.have.length.above(0);
 
